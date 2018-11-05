@@ -2,14 +2,16 @@ CREATE DATABASE bamazon;
 
 USE bamazon;
 
-CREATE TABLE `products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(45) DEFAULT NULL,
-  `department_name` varchar(45) DEFAULT NULL,
-  `price` decimal(10,2) DEFAULT NULL,
-  `stock_quantity` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) 
+CREATE TABLE products (
+    id INTEGER(5) NOT NULL AUTO_INCREMENT,
+    product_name VARCHAR(30),
+    department_name VARCHAR(30),
+    price INTEGER(10),
+    stock_quantity INTEGER(10),
+    PRIMARY KEY (id)
+);
+
+SELECT * FROM products;
 
 INSERT INTO products (id, product_name, department_name, price, stock_quantity)
 VALUES (1, "earrings", "Tiffany", 100, 200);
